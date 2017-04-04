@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!-- Файл решения -->
+    <SolutionFilename>mallenom.superalg.sln</SolutionFilename>
+    <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
+    <Platform Condition="'$(Platform)'==''">x86</Platform>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Directories -->
+    <BuildDirectory>$(MSBuildProjectDirectory)\</BuildDirectory>
+    <RootDirectory>$([System.IO.Path]::GetFullPath($([System.IO.Path]::Combine('$(MSBuildProjectDirectory)', '..\'))))</RootDirectory>
+    <SourcesDirectory>$([System.IO.Path]::Combine('$(RootDirectory)', 'src'))\</SourcesDirectory>
+    <ToolsDirectory>$([System.IO.Path]::Combine('$(SourcesDirectory)', 'tools'))\</ToolsDirectory>
+    <CommonToolsDirectory>$([System.IO.Path]::Combine('$(ToolsDirectory)', 'common'))\</CommonToolsDirectory>
+    <SharedDirectory>$([System.IO.Path]::Combine('$(SourcesDirectory)', 'shared'))\</SharedDirectory>
+    <!-- Files -->
+    <SolutionPath>$([System.IO.Path]::Combine('$(SourcesDirectory)', '$(SolutionFilename)'))</SolutionPath>
+    <VersionFile>$([System.IO.Path]::Combine('$(RootDirectory)', 'version'))</VersionFile>
+    <ActualVersionFile>$([System.IO.Path]::Combine('$(RootDirectory)', 'actualversion.txt'))</ActualVersionFile>
+  </PropertyGroup>
+
+</Project>

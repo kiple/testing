@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CompileModules">
+
+  <Import Project="properties.build"/>
+  <Import Project="version.targets" />
+  <Import Project="$(CommonToolsDirectory)Common.targets" />
+  <Import Project="nuget.build" />
+  <Import Project="signing.build" />
+
+  <!--============================================-->
+  <!-- Генерация файлов содержащих номер версии   -->
+  <!--============================================-->
+  <Target Name="GetVersionFromGit">
+    <MSBuild Projects="version.build" Targets="GetVersionFromGit"
+        Properties="ToolsDirectory=$(ToolsDirectory)"
+        />
+  </Target>
+  <Target Name="BuildVersionFiles">
+    <Delete Files="$(ActualVersionFile)" />
+    <MSBuild Projects="version.build" Targets="UpdateVersion"
+        Properties="VersionFile=$(VersionFile);
+            CommonAssemblyFileTemplate=$(SharedDirectory)CommonAssemblyInfo.template.cs;
+            CommonAssemblyFile=$(SharedDirectory)CommonAssemblyInfo.cs;
+            ActualVersionFile=$(ActualVersionFile);
+            ToolsDirectory=$(ToolsDirectory)">
+    </MSBuild>
+  </Target>
+
+  <!--============================================-->
+  <!-- Создание nuget-пакета                      -->
+  <!--============================================-->
+  <Target Name="CompileModules">
+    <MSBuild Projects="$(SolutionPath)" Targets="Rebuild" Properties="Platform=$(Platform);Configuration=$(Configuration)" />
+  </Target>
+</Project>

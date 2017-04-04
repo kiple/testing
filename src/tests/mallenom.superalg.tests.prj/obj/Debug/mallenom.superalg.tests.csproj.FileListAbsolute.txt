@@ -1,0 +1,15 @@
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.superalg.tests.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.superalg.tests.pdb
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.superalg.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\nunit.framework.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.superalg.pdb
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\nunit.framework.xml
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\obj\Debug\mallenom.superalg.tests.csprojResolveAssemblyReference.cache
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\obj\Debug\mallenom.superalg.tests.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\obj\Debug\mallenom.superalg.tests.pdb
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.framework.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.imaging.dll
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.framework.pdb
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.framework.xml
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.imaging.pdb
+D:\Projects\educate\superalg\src\tests\mallenom.superalg.tests.prj\bin\Debug\mallenom.imaging.xml
