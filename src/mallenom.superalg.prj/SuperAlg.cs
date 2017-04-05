@@ -11,6 +11,8 @@ namespace Mallenom.Super
 
 		public int Process(Matrix matrix)
 		{
+			Verify.Argument.IsNotNull(matrix, nameof(matrix));
+
 			return matrix.Data.Count(v => v == Value);
 		}
 	}

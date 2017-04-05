@@ -5,7 +5,7 @@
     <!-- Файл решения -->
     <SolutionFilename>mallenom.superalg.sln</SolutionFilename>
     <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
-    <Platform Condition="'$(Platform)'==''">x86</Platform>
+    <Platform Condition="'$(Platform)'==''">Any CPU</Platform>
   </PropertyGroup>
 
   <PropertyGroup>

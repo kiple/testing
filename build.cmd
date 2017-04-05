@@ -19,7 +19,7 @@
 @if %ERRORLEVEL% neq 0 goto error
 @%msbuild% build\master.build /t:BuildVersionFiles
 @if %ERRORLEVEL% neq 0 goto error
-@%msbuild% build\master.build /p:Platform=x86
+@%msbuild% build\master.build
 @if %ERRORLEVEL% neq 0 goto error
 @pause
 @exit /b 0

@@ -41,6 +41,15 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\shared\external\Annotations.cs">
+      <Link>shared\Annotations.cs</Link>
+    </Compile>
+    <Compile Include="..\shared\external\Debug.cs">
+      <Link>shared\Debug.cs</Link>
+    </Compile>
+    <Compile Include="..\shared\external\Verify.cs">
+      <Link>shared\Verify.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuperAlg.cs" />
   </ItemGroup>
