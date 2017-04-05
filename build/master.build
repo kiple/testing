@@ -30,6 +30,7 @@
   <!-- Создание nuget-пакета                      -->
   <!--============================================-->
   <Target Name="CompileModules">
+    <MSBuild Projects="$(SolutionPath)" Targets="Restore" Properties="Platform=$(Platform);Configuration=$(Configuration)" />
     <MSBuild Projects="$(SolutionPath)" Targets="Rebuild" Properties="Platform=$(Platform);Configuration=$(Configuration)" />
   </Target>
 </Project>

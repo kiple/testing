@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mallenom.superalg", "mallenom.superalg.prj\mallenom.superalg.csproj", "{1100FBFD-6005-4847-BB45-DDAF98F3C900}"
 EndProject
@@ -11,8 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{885F68A8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4847B663-2992-4CA9-880C-A5114AA1F517}"
 	ProjectSection(SolutionItems) = preProject
+		shared\CommonAssemblyInfo.template.cs = shared\CommonAssemblyInfo.template.cs
 		..\version = ..\version
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auto", "auto", "{6B7ABB8C-17A1-445F-A4A5-08408DB851E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{0019F954-0E19-4800-B19C-C710841F3DF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "manual", "manual", "{C0C288F0-FCA4-4E6C-8A6A-5A1A8710160D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +40,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B3DC94CB-D00B-493B-B4C0-28FA84D478F0} = {885F68A8-72D8-4356-9DB3-D6A291828A93}
+		{B3DC94CB-D00B-493B-B4C0-28FA84D478F0} = {6B7ABB8C-17A1-445F-A4A5-08408DB851E8}
+		{6B7ABB8C-17A1-445F-A4A5-08408DB851E8} = {885F68A8-72D8-4356-9DB3-D6A291828A93}
+		{0019F954-0E19-4800-B19C-C710841F3DF3} = {885F68A8-72D8-4356-9DB3-D6A291828A93}
+		{C0C288F0-FCA4-4E6C-8A6A-5A1A8710160D} = {885F68A8-72D8-4356-9DB3-D6A291828A93}
 	EndGlobalSection
 EndGlobal

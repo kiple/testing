@@ -30,17 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="mallenom.framework, Version=2.6.17.200, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\mallenom.framework.2.6.17\lib\net45\mallenom.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="mallenom.imaging, Version=3.4.11.422, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\mallenom.imaging.3.4.11\lib\net45\mallenom.imaging.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\shared\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="..\shared\external\Annotations.cs">
       <Link>shared\Annotations.cs</Link>
     </Compile>
@@ -54,7 +51,9 @@
     <Compile Include="SuperAlg.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="mallenom.imaging">
+      <Version>3.4.11</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
