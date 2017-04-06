@@ -14,12 +14,12 @@
 @goto msbuildnotfound
 
 :msbuildfound
-@echo Compiling...
+@echo Compiling (x86)...
 @%msbuild% build\master.build /t:GetVersionFromGit
 @if %ERRORLEVEL% neq 0 goto error
 @%msbuild% build\master.build /t:BuildVersionFiles
 @if %ERRORLEVEL% neq 0 goto error
-@%msbuild% build\master.build
+@%msbuild% build\master.build /p:Platform=x86
 @if %ERRORLEVEL% neq 0 goto error
 @pause
 @exit /b 0
