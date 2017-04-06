@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B3DC94CB-D00B-493B-B4C0-28FA84D478F0}</ProjectGuid>
+    <ProjectGuid>{975A0E28-DE66-4C7E-900E-6A199A77429B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mallenom.Super.Tests</RootNamespace>
-    <AssemblyName>mallenom.superalg.tests</AssemblyName>
+    <RootNamespace>Mallenom.SuperAlg.IntegrationTests</RootNamespace>
+    <AssemblyName>mallenom.superalg.integrationtests</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -35,45 +35,22 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\shared\TestHelpers.cs">
-      <Link>shared\TestHelpers.cs</Link>
-    </Compile>
+    <Compile Include="Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuperAlgTest.cs" />
-    <Compile Include="SuperProcessorTest.cs" />
+    <Compile Include="SuperCalculatorTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit">
+      <Version>3.6.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\mallenom.superalg.prj\mallenom.superalg.csproj">
       <Project>{1100fbfd-6005-4847-bb45-ddaf98f3c900}</Project>
       <Name>mallenom.superalg</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="mallenom.imaging">
-      <Version>3.4.11</Version>
-    </PackageReference>
-    <PackageReference Include="mallenom.imaging.compressed">
-      <Version>3.4.11</Version>
-    </PackageReference>
-    <PackageReference Include="Moq">
-      <Version>4.7.8</Version>
-    </PackageReference>
-    <PackageReference Include="NUnit">
-      <Version>3.6.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\data\M101CM178.jpg">
-      <Link>data\M101CM178.jpg</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\data\T173XT35.jpg">
-      <Link>data\T173XT35.jpg</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

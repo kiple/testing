@@ -9,7 +9,7 @@ namespace Mallenom.Super
 	{
 		public byte Value { set; get; } = 0;
 
-		public int Process(Matrix matrix)
+		public virtual int Process(Matrix matrix)
 		{
 			Verify.Argument.IsNotNull(matrix, nameof(matrix));
 
