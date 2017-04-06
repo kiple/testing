@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mallenom.Super.IntegrationTests
+namespace Mallenom.Super
 {
 	static class Parameters
 	{

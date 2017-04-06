@@ -24,9 +24,12 @@ namespace Mallenom.Super
 		{
 			public Config()
 			{
-				//Add(Job.Clr.With(Jit.LegacyJit));
-				//Add(Job.);
-				KeepBenchmarkFiles = true;
+//				Add(Job.Clr.With(Jit.LegacyJit));
+//				Add(Job.Default
+//					.WithWarmupCount(1)
+//					.WithTargetCount(3)
+//					.WithLaunchCount(2));
+//				KeepBenchmarkFiles = true;
 				Add(ConsoleLogger.Default);
 				Add(TargetMethodColumn.Method);
 				Add(StatisticColumn.AllStatistics);
@@ -41,8 +44,8 @@ namespace Mallenom.Super
 		[Setup]
 		public void Setup()
 		{
-			_alg = new SuperAlg();
 			_matrix = Utility.LoadImageFromResource("Mallenom.Super.data.M101CM178.jpg");
+			_alg = new SuperAlg();
 		}
 
 		[Test]

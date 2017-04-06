@@ -5,7 +5,7 @@ using Mallenom.Super.Tests;
 using NUnit.Framework;
 
 // ReSharper disable InconsistentNaming
-namespace Mallenom.SuperAlg.IntegrationTests
+namespace Mallenom.Super.IntegrationTests
 {
 	[TestFixture]
 	class SuperCalculatorTest : AssertionHelper

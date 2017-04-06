@@ -7,7 +7,7 @@
     <ProjectGuid>{975A0E28-DE66-4C7E-900E-6A199A77429B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mallenom.SuperAlg.IntegrationTests</RootNamespace>
+    <RootNamespace>Mallenom.Super.IntegrationTests</RootNamespace>
     <AssemblyName>mallenom.superalg.integrationtests</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
