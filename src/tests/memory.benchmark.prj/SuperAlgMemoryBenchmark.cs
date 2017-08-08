@@ -11,7 +11,7 @@ using NUnit.Framework;
 namespace Mallenom.Super
 {
 	[TestFixture]
-	class SuperAlgMemoryBenchmark : AssertionHelper
+	class SuperAlgMemoryBenchmark
 	{
 		[Test]
 		[DotMemoryUnit(CollectAllocations = true, SavingStrategy = SavingStrategy.OnAnyFail)]
@@ -27,14 +27,14 @@ namespace Mallenom.Super
 			{
 				var allocated = memory.GetTrafficFrom(memoryCheckPoint1).AllocatedMemory;
 				Console.WriteLine($"Allocated total: {allocated.ObjectsCount} objects, size: {allocated.SizeInBytes / 1024 / 1024} MBytes.");
-				Expect(allocated.ObjectsCount, Is.LessThan(600));
-				Expect(allocated.SizeInBytes, Is.LessThan(7 * 1024 * 1024));
+				Assert.That(allocated.ObjectsCount, Is.LessThan(600));
+				Assert.That(allocated.SizeInBytes, Is.LessThan(7 * 1024 * 1024));
 
 				var allocatedMatrixes = memory.GetTrafficFrom(memoryCheckPoint1).Where(obj => obj.Type.Is<Matrix>()).AllocatedMemory;
 				Console.WriteLine($"Allocated {nameof(Matrix)}: {allocatedMatrixes.ObjectsCount} objects, {allocatedMatrixes.SizeInBytes} bytes.");
-				Expect(allocatedMatrixes.ObjectsCount, Is.EqualTo(12).Within(2));
+				Assert.That(allocatedMatrixes.ObjectsCount, Is.EqualTo(12).Within(2));
 
-				Expect(memory.GetObjects(w => w.Type.Is<Matrix>()).ObjectsCount, Is.EqualTo(0));
+				Assert.That(memory.GetObjects(w => w.Type.Is<Matrix>()).ObjectsCount, Is.EqualTo(0));
 			});
 
 			//Assert.Fail();

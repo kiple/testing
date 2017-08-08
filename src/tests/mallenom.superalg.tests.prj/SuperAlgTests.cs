@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Mallenom.Super.Tests
 {
 	[TestFixture]
-	class SuperAlgTest : AssertionHelper
+	class SuperAlgTests
 	{
 		[OneTimeSetUp]
 		public void OneTimeSetUp()
@@ -33,47 +33,48 @@ namespace Mallenom.Super.Tests
 		}
 
 		[Test]
-		public void Process_CorrectMatrix_ReturnCorrectResult()
+		public void GetValueCount_CorrectMatrix_ReturnCorrectResult()
 		{
+			// Arrange
 			const byte value = 123;
 			var matrix = CreateTestMatrix(value);
 			var alg = new SuperAlg() { Value = value };
 
-			var result = alg.Process(matrix);
+			// Act
+			var result = alg.GetValueCount(matrix);
 
-			Expect(result, Is.EqualTo(matrix.Data.Length / 2));
+			// Assert
+			Assert.That(result, Is.EqualTo(matrix.Data.Length / 2));
 		}
 
 		[Test]
-		public void Process_MatrixIsNull_Exception()
+		public void GetValueCount_MatrixIsNull_Exception()
 		{
 			var alg = new SuperAlg();
 
-			Expect(() => alg.Process(null), Throws.TypeOf<ArgumentNullException>());
+			Assert.That(() => alg.GetValueCount(null), Throws.TypeOf<ArgumentNullException>());
 		}
 
 		[Test]
-		public void Process_RealImage_ReturnCorrectResult()
+		public void GetValueCount_RealImage_ReturnCorrectResult()
 		{
 			var matrix = Utility.LoadImage(@"data\M101CM178.jpg");
 			var alg = new SuperAlg() { Value = 128};
 
-			var result = alg.Process(matrix);
+			var result = alg.GetValueCount(matrix);
 
-			Expect(result, Is.EqualTo(333));
+			Assert.That(result, Is.EqualTo(333));
 		}
 
 		[Test]
-		[TestCase(@"data\M101CM178.jpg", 128, 333)]
-		[TestCase(@"data\T173XT35.jpg", 230, 217)]
-		public void Process_RealImages_ReturnCorrectResult(string filename, byte value, int expectedResult)
+		[TestCase(@"data\M101CM178.jpg", 128, ExpectedResult = 333)]
+		[TestCase(@"data\T173XT35.jpg", 230, ExpectedResult = 217)]
+		public int Process_RealImages_ReturnCorrectResult(string filename, byte value)
 		{
 			var matrix = Utility.LoadImage(filename);
 			var alg = new SuperAlg() { Value = value };
 
-			var result = alg.Process(matrix);
-
-			Expect(result, Is.EqualTo(expectedResult));
+			return alg.GetValueCount(matrix);
 		}
 
 		private static object[] RealMatrixes => new object[]
@@ -83,13 +84,13 @@ namespace Mallenom.Super.Tests
 		};
 
 		[Test, TestCaseSource(nameof(RealMatrixes))]
-		public void Process_RealImages_ReturnCorrectResult1(Matrix matrix, int value, int expectedResult)
+		public void Process_RealImages_ReturnCorrectResult1(Matrix matrix, int value, int ExpectedResult)
 		{
 			var alg = new SuperAlg() { Value = (byte)value };
 
-			var result = alg.Process(matrix);
+			var result = alg.GetValueCount(matrix);
 
-			Expect(result, Is.EqualTo(expectedResult));
+			Assert.That(result, Is.EqualTo(ExpectedResult));
 		}
 
 		private static Matrix CreateTestMatrix(byte value)

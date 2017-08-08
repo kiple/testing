@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,7 +19,7 @@ namespace Mallenom.Super
 
 		public int Calculate(IEnumerable<Matrix> matrixes)
 		{
-			return matrixes.Sum(m => _alg.Process(m));
+			return matrixes.Sum(m => _alg.GetValueCount(m));
 		}
 	}
 }

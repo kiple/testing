@@ -57,10 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="mallenom.imaging">
-      <Version>3.4.11</Version>
+      <Version>3.6.11</Version>
     </PackageReference>
     <PackageReference Include="mallenom.imaging.compressed">
-      <Version>3.4.11</Version>
+      <Version>3.6.11</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

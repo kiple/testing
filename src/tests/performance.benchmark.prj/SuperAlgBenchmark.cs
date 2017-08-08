@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Linq;
 
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
-using BenchmarkDotNet.Environments;
 using BenchmarkDotNet.Exporters;
-using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
 
@@ -18,7 +15,7 @@ using NUnit.Framework;
 namespace Mallenom.Super
 {
 	[TestFixture]
-	public class SuperAlgBenchmark : AssertionHelper
+	public class SuperAlgBenchmark
 	{
 		public class Config : ManualConfig
 		{
@@ -60,7 +57,7 @@ namespace Mallenom.Super
 		[Benchmark]
 		public int Process()
 		{
-			return _alg.Process(_matrix);
+			return _alg.GetValueCount(_matrix);
 		}
 	}
 }

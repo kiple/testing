@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace Mallenom.Super.IntegrationTests
 {
 	[TestFixture]
-	class SuperCalculatorTest : AssertionHelper
+	class SuperCalculatorTests
 	{
 		[Test]
 		public void Calculate()
@@ -17,7 +17,7 @@ namespace Mallenom.Super.IntegrationTests
 
 			var count = calc.Calculate(Parameters.ImagesDirectory);
 
-			Expect(count, Is.EqualTo(Parameters.Count));
+			Assert.That(count, Is.EqualTo(Parameters.Count));
 		}
 	}
 }

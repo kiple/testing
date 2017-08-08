@@ -5,11 +5,12 @@ using Mallenom.Imaging;
 
 namespace Mallenom.Super
 {
+	/// <summary>Алгоритм анализа изображения.</summary>
 	public class SuperAlg
 	{
 		public byte Value { set; get; } = 0;
 
-		public virtual int Process(Matrix matrix)
+		public virtual int GetValueCount(Matrix matrix)
 		{
 			Verify.Argument.IsNotNull(matrix, nameof(matrix));
 

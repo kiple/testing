@@ -10,18 +10,18 @@ using NUnit.Framework;
 namespace Mallenom.Super.Tests
 {
 	[TestFixture]
-	class SuperProcessorTest : AssertionHelper
+	class SuperProcessorTests
 	{
 		[Test]
 		public void Calculate()
 		{
 			var alg = new Mock<SuperAlg>();
-			alg.Setup(a => a.Process(It.IsAny<Matrix>())).Returns(() => 100);
+			alg.Setup(a => a.GetValueCount(It.IsAny<Matrix>())).Returns(() => 100);
 			var processor = new SuperProcessor(alg.Object);
 
 			var count = processor.Calculate(new[] { new Matrix(), new Matrix() });
 
-			Expect(count, Is.EqualTo(200));
+			Assert.That(count, Is.EqualTo(200));
 		}
 	}
 }

@@ -43,8 +43,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetUp.cs" />
-    <Compile Include="SuperAlgTest.cs" />
-    <Compile Include="SuperProcessorTest.cs" />
+    <Compile Include="SuperAlgTests.cs" />
+    <Compile Include="SuperProcessorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\mallenom.superalg.prj\mallenom.superalg.csproj">
@@ -54,16 +54,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="mallenom.imaging">
-      <Version>3.4.11</Version>
+      <Version>3.6.11</Version>
     </PackageReference>
     <PackageReference Include="mallenom.imaging.compressed">
-      <Version>3.4.11</Version>
+      <Version>3.6.11</Version>
     </PackageReference>
     <PackageReference Include="Moq">
-      <Version>4.7.8</Version>
+      <Version>4.7.99</Version>
     </PackageReference>
     <PackageReference Include="NUnit">
-      <Version>3.6.1</Version>
+      <Version>3.7.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
